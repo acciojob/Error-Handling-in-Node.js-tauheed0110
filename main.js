@@ -1,6 +1,8 @@
 const fs = require('fs');
+const path = require('path');
 
-const filePath = process.argv[2];
+const filePath = path.join(__dirname, process.argv[2]);
+
 
 fs.readFile(filePath, 'utf8', (err, data) => {
   if (err) {
